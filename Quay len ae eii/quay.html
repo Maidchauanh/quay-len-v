@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-08">
+
+<title>
+Quẩy lên ae eiii :v
+</title>
+
+</head>
+
+
+<body>
+<script src="p5.js"></script>
+<script>
+let value=[]
+let Width=800
+let Height=400
+let strandWidth=10
+let soluong=Width/strandWidth
+function setup(){
+	createCanvas(Width,Height)
+	for(let i =0;i<soluong;i++){
+		value[i]=Math.floor(Math.random(Height)*100)
+	}
+	//value=sort(value)
+	frameRate(10)
+}
+
+console.log(value)
+function draw(){
+	background(0)
+	translate(0,400)
+	for(let i=0;i<soluong;i++){
+		let R= Math.floor(random(0,255)) 
+		let G= Math.floor(random(0,255)) 
+		let B= Math.floor(random(0,255)) 
+		stroke(R,G,B)
+		strokeWeight(strandWidth-2)
+		line(i*strandWidth+strandWidth/2,0,i*strandWidth+strandWidth/2,Math.floor(random(-10,-250)) )
+	}
+}
+
+</script>
+</body>
+
+
+</html>
